@@ -1,4 +1,9 @@
 function SecondLargest(arr){
+
+  if(arr.length<2){
+    return "Array should atleast have 2 elements";
+  }
+
    largest = -Infinity;
    Second  = -Infinity;
 
@@ -6,7 +11,7 @@ function SecondLargest(arr){
        if(arr[i]>largest){
          Second = largest;
          largest = arr[i];
-       } else if (arr[i] > Second) {
+       } else if (arr[i] > Second && arr[i] != largest) {
          Second = arr[i];
        }
    }
@@ -14,6 +19,6 @@ function SecondLargest(arr){
 }
 
 
-let arr = [10,-6,2,0,-8,22];
+let arr = [10,-6,2,0,-8,10];
 let Output = SecondLargest(arr);
 console.log(Output);
