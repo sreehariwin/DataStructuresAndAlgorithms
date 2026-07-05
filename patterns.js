@@ -151,3 +151,33 @@ for(let i=0;i<n;i++){
     console.log(rows);
     
 }
+
+/*Pattern Printing
+
+No 7:
+
+     *    
+    ***   
+   *****  
+  ******* 
+ *********
+
+*/
+
+
+let n = 5;
+
+for(let i=1;i<=n;i++){
+    let rows = "";
+    for(let j=0;j<=9;j++){
+
+        if (j>=(n+1)-i && j<=(n-1)+i){
+            rows = rows+("*");
+        } else {
+            rows = rows+(" ");
+        }
+
+    }
+    console.log(rows);
+    
+}
