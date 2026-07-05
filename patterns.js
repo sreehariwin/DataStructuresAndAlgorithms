@@ -117,6 +117,8 @@ No 5:
 333
 4444
 
+*/
+
 let n=5;
 
 for(let i=0;i<n;i++){
@@ -127,4 +129,25 @@ for(let i=0;i<n;i++){
     console.log(rows);
 }
 
+
+/*Pattern Printing
+
+No 6:
+
+1234
+123
+12
+1
+
 */
+
+let n = 4;
+
+for(let i=0;i<n;i++){
+    let rows = "";
+    for(let j=0;j<n-i;j++){
+      rows = rows+(j+1);
+    }
+    console.log(rows);
+    
+}
