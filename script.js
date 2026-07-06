@@ -298,3 +298,53 @@
 // }
 
 // console.log(reverseStr('golang'));
+
+
+// function SecondLargest(arr){
+
+//     if(arr.length<2){
+//       return "Array should atleast have 2 elements";
+//     }
+  
+//      largest = -Infinity;
+//      Second  = -Infinity;
+  
+//      for(let i=0;i<arr.length;i++){
+//          if(arr[i]>largest){
+//            Second = largest;
+//            largest = arr[i];
+//          } else if (arr[i] > Second && arr[i] != largest) {
+//            Second = arr[i];
+//          }
+//      }
+//      return Second;
+//   }
+  
+  
+//   let arr = [10,-6,2,0,-8,10];
+//   let Output = SecondLargest(arr);
+//   console.log(Output);
+
+
+  
+// function countDigits(n){
+
+//     if(n==0) return 1;    
+//     n=Math.abs(n);
+   
+//     let count = 0
+//     while(n>0){
+//         n=Math.floor(n/10);
+//         count++;
+//     }
+
+//     return count;
+
+// }
+
+// let n= -259;
+
+// let result = countDigits(n);
+
+// console.log(result);
+
