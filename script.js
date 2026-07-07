@@ -348,3 +348,30 @@
 
 // console.log(result);
 
+
+
+
+// function isPalindrome(x){
+//     if(x<0) return false;
+  
+//     let rev = 0;
+//     let xCopy = x;
+  
+//     while(x>0){
+//       let rem = x%10;
+//       rev = (10*rev)+rem;
+//       x   = Math.floor(x/10);
+//     }
+  
+//     if(rev === xCopy){
+//       return true;
+//     }
+  
+//     return false;
+  
+//   }
+  
+//   let n = 1221;
+//   let result = isPalindrome(n);
+//   console.log(result);
+  
