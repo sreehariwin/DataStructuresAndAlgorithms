@@ -375,3 +375,31 @@
 //   let result = isPalindrome(n);
 //   console.log(result);
   
+
+
+// function reverseInt(x){
+
+//     let xCopy = x;
+//     let rev = 0;
+//     x = Math.abs(x);
+  
+//     while(x>0){
+//       let rem = x%10;
+//       rev = (10*rev)+rem;
+//       x = Math.floor(x/10);
+//     }
+  
+//     let limit = Math.pow(2,31);
+  
+//     if(rev<-limit || rev>limit)return 0;
+  
+//     return (xCopy<0)?-rev:rev;
+  
+//   }
+  
+//   let x = 123;
+  
+//   let result = reverseInt(x);
+  
+//   console.log(result);
+  
