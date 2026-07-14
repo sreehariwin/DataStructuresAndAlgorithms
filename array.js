@@ -69,3 +69,36 @@ function reverseString(s){
 let s = ["h","e","l","l","o"];
 let result = reverseString(s);
 console.log(result);
+
+
+/* 
+121. Best Time to Buy and Sell Stock
+
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+
+*/
+
+function maxProfit(prices) {
+
+  let min  = prices[0];
+  let maxPrice = 0; 
+
+ for(let i=1;i<prices.length;i++){
+   if(prices[i]-min > maxPrice){
+      maxPrice = prices[i]-min;
+   }
+   if(prices[i]<min){
+      min = prices[i];
+   }
+ }
+ return maxPrice;
+}
+
+let prices = [1,2];
+
+let result = maxProfit(prices);
+
+console.log(result);
+
+
