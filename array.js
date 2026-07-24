@@ -171,3 +171,99 @@ function merge(nums1, m, nums2, n){
  let result = merge(nums1, m, nums2, n);
  
  console.log(result);
+
+ /* 283. Move Zeroes
+
+ Input: nums = [0,1,0,3,12]
+ Output: [1,3,12,0,0]
+
+ */
+
+ function moveZeroes(nums){
+
+  let x = 0;
+
+  for(let i=0;i<nums.length;i++){
+
+      if(nums[i]!==0){
+          nums[x] = nums[i];
+          x++;
+      }
+  }
+
+  for(i=x;i<nums.length;i++){
+      nums[i] = 0;
+  }
+
+  return nums;
+
+}
+
+let nums = [0,1,0,3,12];
+
+let result = moveZeroes(nums);
+console.log(result);
+
+
+/* 485. Max Consecutive Ones 
+
+Input: nums = [1,1,0,1,1,1]
+Output: 3 */
+
+function findMaxConsecutiveOnes(nums){
+    
+  let currentSum = 0;
+  let MaxSum = 0;
+
+  for(let i=0;i<nums.length;i++){
+     
+      if(nums[i]==1){
+         currentSum++;
+      } else {
+          MaxSum = Math.max(currentSum,MaxSum);
+          currentSum=0;
+      }
+      
+  }
+
+  return Math.max(MaxSum,currentSum);
+}
+
+let  nums = [1,1,0,1,1,1];
+let result = findMaxConsecutiveOnes(nums);
+console.log(result);
+
+
+/* 136. Single Number  
+
+Input: nums = [4,1,2,1,2]
+
+Output: 4
+
+*/
+
+//method 1
+
+function singleNumber(nums){
+  let hash = {};
+
+  for(let i=0;i<nums.length;i++){
+      if(!hash[nums[i]]){
+          hash[nums[i]]=1;
+      } else {
+          hash[nums[i]]++;
+      }
+  }
+
+  for(let i=0;i<nums.length;i++){
+      if(hash[nums[i]]==1){
+          return nums[i];
+      }
+  }
+}
+
+let  nums = [4,1,2,1,2];
+let result = singleNumber(nums);
+console.log(result);
+
+
