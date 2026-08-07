@@ -283,3 +283,26 @@ let  nums = [4,1,2,1,2];
 let result = singleNumber(nums);
 console.log(result);
 
+
+/* 35. 
+
+*/
+
+function singleNumber(nums,target){
+  
+  for(let i=0;i<nums.length;i++){
+     if(nums[i]!=target & nums[i]>target){
+      return i;
+     }
+
+     if(nums[i]===target){
+      return i;
+     }
+  }
+  return nums.length; 
+
+}
+
+let  nums = [1,3,5,6];
+let result = singleNumber(nums,7);
+console.log(result);
